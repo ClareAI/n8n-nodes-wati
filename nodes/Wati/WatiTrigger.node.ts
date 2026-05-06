@@ -5,6 +5,7 @@ import {
 	INodeType,
 	INodeTypeDescription,
 	IWebhookResponseData,
+	NodeConnectionTypes,
 } from 'n8n-workflow';
 
 export class WatiTrigger implements INodeType {
@@ -21,7 +22,7 @@ export class WatiTrigger implements INodeType {
 			name: 'Wati',
 		},
 		inputs: [],
-		outputs: ['main'],
+		outputs: [NodeConnectionTypes.Main],
 		credentials: [
 			{
 				name: 'watiApi',

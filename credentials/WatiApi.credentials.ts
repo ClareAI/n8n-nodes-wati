@@ -5,12 +5,12 @@ import {
 	INodeProperties,
 } from 'n8n-workflow';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { version } = require('../../package.json') as { version: string };
 
 export class WatiApi implements ICredentialType {
 	name = 'watiApi';
 	displayName = 'Wati API';
+	icon = 'file:../nodes/Wati/wati.svg' as const;
 	documentationUrl = 'https://auth.wati.io/register/?utm_source=n8n&utm_medium=referral&utm_campaign=n8n';
 	properties: INodeProperties[] = [
 		{
