@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-wati",
-	"version": "0.3.4",
+	"version": "0.3.5",
 	"description": "n8n community node for Wati — WhatsApp Business API automation. Send & receive WhatsApp messages, manage templates, contacts, and webhooks.",
 	"keywords": [
 		"n8n-community-node-package",
@@ -19,23 +19,23 @@
 		"team inbox"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/nick-wati/n8n-nodes-wati",
+	"homepage": "https://github.com/ClareAI/n8n-nodes-wati",
 	"author": {
 		"name": "Wati",
-		"email": "naiqiao@clare.ai",
+		"email": "wei.deng@wati.io",
 		"url": "https://www.wati.io"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/nick-wati/n8n-nodes-wati.git"
+		"url": "https://github.com/ClareAI/n8n-nodes-wati.git"
 	},
 	"main": "index.js",
 	"scripts": {
 		"build": "tsc && gulp build:icons",
 		"dev": "tsc --watch",
 		"format": "prettier nodes credentials --write",
-		"lint": "eslint nodes credentials package.json",
-		"lintfix": "eslint nodes credentials package.json --fix",
+		"lint": "eslint --ext .ts nodes credentials package.json",
+		"lintfix": "eslint --ext .ts nodes credentials package.json --fix",
 		"prepublishOnly": "npm run build"
 	},
 	"files": [

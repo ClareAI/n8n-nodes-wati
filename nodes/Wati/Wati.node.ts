@@ -4,9 +4,11 @@ import {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
-	NodeOperationError,
+	NodeApiError,
+	NodeConnectionTypes,
 	IHttpRequestMethods,
 	IHttpRequestOptions,
+	JsonObject,
 } from 'n8n-workflow';
 
 /**
@@ -33,8 +35,8 @@ export class Wati implements INodeType {
 		defaults: {
 			name: 'Wati',
 		},
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: [NodeConnectionTypes.Main],
+		outputs: [NodeConnectionTypes.Main],
 		credentials: [
 			{
 				name: 'watiApi',
@@ -1261,13 +1263,13 @@ export class Wati implements INodeType {
 					});
 					continue;
 				}
-				throw new NodeOperationError(
-					this.getNode(),
-					error as Error,
-					{
-						itemIndex: i,
-					},
-				);
+			throw new NodeApiError(
+				this.getNode(),
+				error as JsonObject,
+				{
+					itemIndex: i,
+				},
+			);
 			}
 		}
 
