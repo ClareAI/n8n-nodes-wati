@@ -10,7 +10,7 @@ import {
 
 export class WatiTrigger implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Wati',
+		displayName: 'Wati Trigger',
 		name: 'watiTrigger',
 		icon: 'file:wati.svg',
 		group: ['trigger'],
@@ -19,7 +19,7 @@ export class WatiTrigger implements INodeType {
 		description:
 			'Trigger workflows on WhatsApp events via Wati — incoming messages, delivery updates, and more.',
 		defaults: {
-			name: 'Wati',
+			name: 'Wati Trigger',
 		},
 		inputs: [],
 		outputs: [NodeConnectionTypes.Main],
