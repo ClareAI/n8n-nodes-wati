@@ -1091,9 +1091,9 @@ export class Wati implements INodeType {
 								}),
 							);
 
-						const receiver: IDataObject = {
-							whatsappNumber,
-							...(customParams.length > 0 && { customParams }),
+						const recipient: IDataObject = {
+							phone_number: whatsappNumber,
+							...(customParams.length > 0 && { custom_params: customParams }),
 						};
 
 						const options: IHttpRequestOptions = {
@@ -1105,7 +1105,7 @@ export class Wati implements INodeType {
 							body: {
 								template_name: templateName,
 								broadcast_name: broadcastName,
-								receivers: [receiver],
+								recipients: [recipient],
 							},
 						};
 
