@@ -1,67 +1,72 @@
 {
-	"name": "n8n-nodes-wati",
-	"version": "0.3.7",
-	"description": "n8n community node for Wati — WhatsApp Business API automation. Send & receive WhatsApp messages, manage templates, contacts, and webhooks.",
-	"keywords": [
-		"n8n-community-node-package",
-		"n8n",
-		"wati",
-		"whatsapp",
-		"whatsapp business",
-		"whatsapp business api",
-		"whatsapp api",
-		"whatsapp messaging",
-		"whatsapp automation",
-		"messaging",
-		"chat",
-		"chatbot",
-		"customer engagement",
-		"team inbox"
-	],
-	"license": "MIT",
-	"homepage": "https://github.com/ClareAI/n8n-nodes-wati",
-	"author": {
-		"name": "Wati",
-		"email": "wei.deng@wati.io",
-		"url": "https://www.wati.io"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ClareAI/n8n-nodes-wati.git"
-	},
-	"main": "index.js",
-	"scripts": {
-		"build": "tsc && gulp build:icons",
-		"dev": "tsc --watch",
-		"format": "prettier nodes credentials --write",
-		"lint": "eslint --ext .ts nodes credentials package.json",
-		"lintfix": "eslint --ext .ts nodes credentials package.json --fix",
-		"prepublishOnly": "npm run build"
-	},
-	"files": [
-		"dist"
-	],
-	"n8n": {
-		"n8nNodesApiVersion": 1,
-		"credentials": [
-			"dist/credentials/WatiApi.credentials.js"
-		],
-		"nodes": [
-			"dist/nodes/Wati/Wati.node.js",
-			"dist/nodes/Wati/WatiTrigger.node.js"
-		]
-	},
-	"devDependencies": {
-		"@types/node": "^25.2.2",
-		"@typescript-eslint/parser": "^7.0.0",
-		"eslint": "^8.56.0",
-		"gulp": "^5.0.1",
-		"n8n-workflow": "^1.120.8",
-		"prettier": "^3.2.0",
-		"typescript": "^5.9.3"
-	},
-	"dependencies": {},
-	"peerDependencies": {
-		"n8n-workflow": "*"
-	}
+  "name": "n8n-nodes-wati",
+  "version": "0.3.7",
+  "description": "n8n community node for Wati \u2014 WhatsApp Business API automation. Send & receive WhatsApp messages, manage templates, contacts, and webhooks.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "wati",
+    "whatsapp",
+    "whatsapp business",
+    "whatsapp business api",
+    "whatsapp api",
+    "whatsapp messaging",
+    "whatsapp automation",
+    "messaging",
+    "chat",
+    "chatbot",
+    "customer engagement",
+    "team inbox"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ClareAI/n8n-nodes-wati",
+  "author": {
+    "name": "Wati",
+    "email": "wei.deng@wati.io",
+    "url": "https://www.wati.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ClareAI/n8n-nodes-wati.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint --ext .ts nodes credentials package.json",
+    "lintfix": "eslint --ext .ts nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/WatiApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Wati/Wati.node.js",
+      "dist/nodes/Wati/WatiTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.2",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.56.0",
+    "gulp": "^5.0.1",
+    "n8n-workflow": "^1.120.8",
+    "prettier": "^3.2.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "overrides": {
+    "js-yaml": "4.3.1",
+    "lodash": "4.18.0",
+    "form-data": "4.0.4"
+  }
 }
